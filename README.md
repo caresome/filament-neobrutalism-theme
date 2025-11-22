@@ -2,7 +2,7 @@
 
 A neobrutalism theme for FilamentPHP admin panels.
 
-![filament-neobrutalism-theme-thumbnail](https://github.com/user-attachments/assets/ed9a61c0-00f1-4a89-92e7-68d5eb601903)
+![filament-neobrutalism-theme-thumbnail](https://github.com/user-attachments/assets/779408b3-83fa-41f4-99bd-e343e086f822)
 
 ## Installation
 

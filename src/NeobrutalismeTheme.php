@@ -5,7 +5,7 @@ namespace Caresome\FilamentNeobrutalism;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 
-class NeobrutalismePlugin implements Plugin
+class NeobrutalismeTheme implements Plugin
 {
     public function getId(): string
     {

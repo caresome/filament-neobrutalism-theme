@@ -12,15 +12,15 @@ composer require caresome/filament-neobrutalism-theme
 
 ## Usage
 
-Register the plugin in your Filament panel provider:
+Register the theme in your Filament panel provider:
 
 ```php
-use Caresome\FilamentNeobrutalism\NeobrutalismePlugin;
+use Caresome\FilamentNeobrutalism\NeobrutalismeTheme;
 
 public function panel(Panel $panel): Panel
 {
     return $panel
-        ->plugin(NeobrutalismePlugin::make());
+        ->plugin(NeobrutalismeTheme::make());
 }
 ```
 

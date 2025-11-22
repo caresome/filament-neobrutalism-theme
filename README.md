@@ -2,6 +2,8 @@
 
 A neobrutalism theme for FilamentPHP admin panels.
 
+![filament-neobrutalism-theme-thumbnail](https://github.com/user-attachments/assets/ed9a61c0-00f1-4a89-92e7-68d5eb601903)
+
 ## Installation
 
 Install the package via Composer:

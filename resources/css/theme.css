@@ -139,8 +139,8 @@ body::before {
         45deg,
         transparent,
         transparent 8px,
-        rgba(0, 0, 0, 0.08) 8px,
-        rgba(0, 0, 0, 0.08) 16px
+        var(--gray-100) 8px,
+        var(--gray-200) 16px
     ) !important;
     background-size: 100% 100%;
 }
@@ -152,8 +152,8 @@ body::before {
         45deg,
         transparent,
         transparent 8px,
-        rgba(255, 255, 255, 0.05) 8px,
-        rgba(255, 255, 255, 0.05) 16px
+        var(--gray-600) 8px,
+        var(--gray-700) 16px
     ) !important;
 }
 
@@ -164,13 +164,13 @@ body::before {
 body,
 .fi-body,
 .fi-main {
-    background-color: rgb(254 252 232);
+    background-color: var(--warning-50);
 }
 
 .dark body,
 .dark .fi-body,
 .dark .fi-main {
-    background-color: rgb(3 7 18);
+    background-color: var(--gray-900);
 }
 
 .fi-main-content {
@@ -536,13 +536,13 @@ body,
     border-width: 2px;
     border-style: solid;
     border-color: var(--gray-950);
-    background-color: rgb(219 234 254);
+    background-color: var(--primary-100);
     box-shadow: 4px 4px 0px var(--gray-950);
 }
 
 .dark .fi-section:not(.fi-section-not-contained):not(.fi-aside) {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -609,7 +609,7 @@ body,
 
 .dark .fi-input-wrp {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 3px 3px 0px var(--gray-600);
 }
 
@@ -771,7 +771,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(229 231 235);
+    background-color: var(--gray-200);
     transition-property: all;
     transition-duration: 150ms;
     box-shadow: 2px 2px 0px var(--gray-950);
@@ -779,7 +779,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
 
 .dark .fi-toggle {
     border-color: var(--gray-600);
-    background-color: rgb(55 65 81);
+    background-color: var(--gray-700);
     box-shadow: 2px 2px 0px var(--gray-600);
 }
 
@@ -818,13 +818,13 @@ input[type="radio"].fi-radio-input.fi-invalid {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(219 234 254);
+    background-color: var(--primary-100);
     box-shadow: 4px 4px 0px var(--gray-950);
 }
 
 .dark .fi-wi-stats-overview-stat {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -837,7 +837,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
 .dark .fi-wi-stats-overview-stat.fi-color {
     border-color: var(--color-400);
     box-shadow: 4px 4px 0px var(--color-400);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
 }
 
 .fi-wi-stats-overview-stat .fi-wi-stats-overview-stat-value,
@@ -853,11 +853,11 @@ input[type="radio"].fi-radio-input.fi-invalid {
 }
 
 .fi-wi-stats-overview-stat .fi-wi-stats-overview-stat-description * {
-    color: rgb(55 65 81);
+    color: var(--gray-700);
 }
 
 .dark .fi-wi-stats-overview-stat .fi-wi-stats-overview-stat-description * {
-    color: rgb(209 213 219);
+    color: var(--gray-300);
 }
 
 /* ============================================
@@ -884,24 +884,24 @@ input[type="radio"].fi-radio-input.fi-invalid {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(239 246 255);
+    background-color: var(--primary-50);
     box-shadow: 6px 6px 0px var(--gray-950);
 }
 
 .dark .fi-modal > .fi-modal-window-ctn > .fi-modal-window {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 6px 6px 0px var(--gray-600);
 }
 
 .fi-modal-header,
 .fi-modal-content {
-    background-color: rgb(239 246 255);
+    background-color: var(--primary-50);
 }
 
 .dark .fi-modal-header,
 .dark .fi-modal-content {
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
 }
 
 .fi-modal-header.fi-sticky {
@@ -956,13 +956,13 @@ input[type="radio"].fi-radio-input.fi-invalid {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(243 244 246);
+    background-color: var(--gray-100);
     box-shadow: 4px 4px 0px var(--gray-950);
 }
 
 .dark .fi-dropdown-panel {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -1084,7 +1084,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-ta-ctn {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -1305,13 +1305,13 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-badge:not(.fi-color) {
     border-color: var(--gray-950);
-    background-color: rgb(219 234 254);
+    background-color: var(--primary-100);
     box-shadow: 2px 2px 0px var(--gray-950);
 }
 
 .dark .fi-badge:not(.fi-color) {
     border-color: var(--gray-600);
-    background-color: rgb(55 65 81);
+    background-color: var(--gray-700);
     box-shadow: 2px 2px 0px var(--gray-600);
 }
 
@@ -1328,7 +1328,7 @@ form.fi-dropdown-list-item:focus-within * {
 .dark .fi-badge.fi-color {
     border-color: var(--color-400);
     box-shadow: 2px 2px 0px var(--color-400);
-    background-color: rgb(55 65 81);
+    background-color: var(--gray-700);
 }
 
 .fi-topbar-item-btn .fi-badge,
@@ -1343,13 +1343,13 @@ form.fi-dropdown-list-item:focus-within * {
    ============================================ */
 
 .fi-sidebar {
-    background-color: rgb(254 252 232);
+    background-color: var(--warning-50);
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
 
 .dark .fi-sidebar {
-    background-color: rgb(3 7 18);
+    background-color: var(--gray-900);
 }
 
 .fi-sidebar-close-overlay {
@@ -1361,17 +1361,17 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .dark .fi-sidebar-header {
-    border-color: rgb(17 24 39);
+    border-color: var(--gray-900);
 }
 
 .fi-sidebar-item-btn > .fi-icon,
 .fi-sidebar-item-btn > .fi-sidebar-item-label {
-    color: rgb(17 24 39);
+    color: var(--gray-900);
 }
 
 .dark .fi-sidebar-item-btn > .fi-icon,
 .dark .fi-sidebar-item-btn > .fi-sidebar-item-label {
-    color: rgb(243 244 246);
+    color: var(--gray-100);
 }
 
 .fi-sidebar-item-btn {
@@ -1380,7 +1380,7 @@ form.fi-dropdown-list-item:focus-within * {
     border-style: solid;
     border-color: transparent;
     transition-property: all;
-    transition-duration: 150ms;
+    transition-duration: 50ms;
 }
 
 .fi-sidebar-item.fi-sidebar-item-has-url:not(.fi-active)
@@ -1447,7 +1447,7 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-sidebar .fi-user-menu-trigger {
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(55 65 81);
+    border-color: var(--gray-700);
     border-radius: 0.375rem;
     transition-property: all;
     transition-duration: 150ms;
@@ -1477,16 +1477,16 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-sidebar .fi-user-menu .fi-dropdown-panel {
     border-width: 2px;
     border-style: solid;
-    border-color: rgb(55 65 81);
+    border-color: var(--gray-700);
     border-radius: 0.5rem;
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 3px 3px 0px var(--gray-700);
 }
 
 .fi-sidebar .fi-user-menu .fi-dropdown-header,
 .fi-sidebar .fi-user-menu .fi-dropdown-header-label,
 .fi-sidebar .fi-user-menu .fi-dropdown-header * {
-    color: rgb(243 244 246);
+    color: var(--gray-100);
     font-weight: 700;
 }
 
@@ -1636,7 +1636,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-global-search-field .fi-input-wrapper {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 2px 2px 0px var(--gray-600);
 }
 
@@ -1703,7 +1703,7 @@ form.fi-dropdown-list-item:focus-within * {
 /* Group header */
 .fi-global-search-result-group-header {
     border-bottom: 2px solid var(--gray-950);
-    background-color: rgb(254 252 232);
+    background-color: var(--warning-50);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.025em;
@@ -1711,23 +1711,23 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-global-search-result-group-header {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
 }
 
 /* Result group results dividers */
 .fi-global-search-result-group-results > * + * {
     border-top-width: 2px;
-    border-color: rgb(229 231 235);
+    border-color: var(--gray-200);
 }
 
 .dark .fi-global-search-result-group-results > * + * {
-    border-color: rgb(55 65 81);
+    border-color: var(--gray-700);
 }
 
 /* Individual result item */
 .fi-global-search-result:hover,
 .fi-global-search-result:focus-within {
-    background-color: rgb(219 234 254);
+    background-color: var(--primary-100);
 }
 
 .dark .fi-global-search-result:hover,
@@ -1754,13 +1754,13 @@ form.fi-dropdown-list-item:focus-within * {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(220 252 231);
+    background-color: var(--success-100);
     box-shadow: 4px 4px 0px var(--gray-950);
 }
 
 .dark .fi-fieldset {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -1806,7 +1806,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-select {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 3px 3px 0px var(--gray-600);
 }
 
@@ -1848,7 +1848,7 @@ form.fi-dropdown-list-item:focus-within * {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(254 252 232);
+    background-color: var(--warning-50);
     transition-property: all;
     transition-duration: 150ms;
     box-shadow: 4px 4px 0px var(--gray-950);
@@ -1856,7 +1856,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .filepond--root {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -1886,7 +1886,7 @@ form.fi-dropdown-list-item:focus-within * {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(254 252 232);
+    background-color: var(--warning-50);
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     transition-property: all;
@@ -1896,7 +1896,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-fo-rich-editor div[data-type="customBlock"] {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -1914,161 +1914,17 @@ form.fi-dropdown-list-item:focus-within * {
    ============================================ */
 
 .fi-sc-wizard-header {
-    background-color: transparent;
-    border-width: 0;
-    padding: 0;
-    margin-bottom: 1rem;
-}
-
-.fi-sc-wizard-header-step {
-    position: relative;
-}
-
-.fi-sc-wizard-header-step-btn {
     border-width: 2px;
     border-style: solid;
-    border-color: transparent;
-    background-color: transparent;
-    border-radius: 0.375rem;
-    box-shadow: none;
-    transition-property: all;
-    transition-duration: 150ms;
+    border-color: var(--gray-950);
+    background-color: var(--primary-100);
+    box-shadow: 4px 4px 0px var(--gray-950);
 }
 
-.fi-sc-wizard-header-step-btn:not(:disabled):hover {
-    transform: translateY(-1px);
-    border-color: rgb(209 213 219);
-    box-shadow: 2px 2px 0px var(--gray-300);
-}
-
-.dark .fi-sc-wizard-header-step-btn:not(:disabled):hover {
-    border-color: rgb(55 65 81);
-    box-shadow: 2px 2px 0px var(--gray-700);
-}
-
-.fi-sc-wizard-header-step-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-btn {
-    background-color: transparent;
-    border-color: var(--primary-700);
-    box-shadow: 3px 3px 0px var(--primary-700);
-}
-
-.dark .fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-btn {
-    border-color: var(--primary-400);
-    box-shadow: 3px 3px 0px var(--primary-400);
-}
-
-.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-number,
-.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-label,
-.fi-sc-wizard-header-step.fi-active .fi-icon {
-    color: var(--primary-700);
-    font-weight: 600;
-}
-
-.dark .fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-number,
-.dark .fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-label,
-.dark .fi-sc-wizard-header-step.fi-active .fi-icon {
-    color: var(--primary-400);
-}
-
-.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-btn {
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: none;
-}
-
-.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-number,
-.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-label,
-.fi-sc-wizard-header-step.fi-completed .fi-icon {
-    color: var(--success-600);
-    font-weight: 500;
-}
-
-.dark .fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-number,
-.dark .fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-label,
-.dark .fi-sc-wizard-header-step.fi-completed .fi-icon {
-    color: var(--success-400);
-}
-
-.fi-sc-wizard-header-step-icon-ctn {
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(209 213 219);
-    border-radius: 0.375rem;
-    background-color: transparent;
-    transition-property: all;
-    transition-duration: 150ms;
-    box-shadow: 2px 2px 0px var(--gray-300);
-}
-
-.dark .fi-sc-wizard-header-step-icon-ctn {
-    border-color: rgb(55 65 81);
-    box-shadow: 2px 2px 0px var(--gray-700);
-}
-
-.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-icon-ctn {
-    background-color: rgb(239 246 255);
-    border-color: var(--primary-700);
-    box-shadow: 2px 2px 0px var(--primary-700);
-}
-
-.dark .fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-icon-ctn {
-    background-color: rgb(23 37 84);
-    border-color: var(--primary-400);
-    box-shadow: 2px 2px 0px var(--primary-400);
-}
-
-.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-icon-ctn {
-    background-color: rgb(240 253 244);
-    border-color: var(--success-600);
-    box-shadow: 2px 2px 0px var(--success-600);
-}
-
-.dark
-    .fi-sc-wizard-header-step.fi-completed
-    .fi-sc-wizard-header-step-icon-ctn {
-    background-color: rgb(4 47 46);
-    border-color: var(--success-500);
-    box-shadow: 2px 2px 0px var(--success-500);
-}
-
-.fi-sc-wizard-header-step-number {
-    font-weight: 600;
-    color: rgb(55 65 81);
-}
-
-.dark .fi-sc-wizard-header-step-number {
-    color: rgb(209 213 219);
-}
-
-.fi-sc-wizard-header-step-label {
-    font-weight: 500;
-    color: rgb(55 65 81);
-}
-
-.dark .fi-sc-wizard-header-step-label {
-    color: rgb(209 213 219);
-}
-
-.fi-sc-wizard-header-step-separator {
-    stroke: rgb(209 213 219);
-    stroke-width: 2px;
-}
-
-.dark .fi-sc-wizard-header-step-separator {
-    stroke: rgb(55 65 81);
-}
-
-.fi-sc-wizard-header-step.fi-active .fi-sc-wizard-header-step-separator {
-    stroke: var(--primary-500);
-}
-
-.fi-sc-wizard-header-step.fi-completed .fi-sc-wizard-header-step-separator {
-    stroke: var(--success-500);
+.dark .fi-sc-wizard-header {
+    border-color: var(--gray-600);
+    background-color: var(--gray-900);
+    box-shadow: 4px 4px 0px var(--gray-600);
 }
 
 /* ============================================
@@ -2085,13 +1941,13 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-alert:not(.fi-color) {
-    background-color: rgb(239 246 255);
+    background-color: var(--primary-50);
     border-color: var(--info-600);
     box-shadow: 4px 4px 0px var(--info-600);
 }
 
 .dark .fi-alert:not(.fi-color) {
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     border-color: var(--info-400);
     box-shadow: 4px 4px 0px var(--info-400);
 }
@@ -2105,7 +1961,7 @@ form.fi-dropdown-list-item:focus-within * {
 .dark .fi-alert.fi-color {
     border-color: var(--color-400);
     box-shadow: 4px 4px 0px var(--color-400);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
 }
 
 .fi-alert-icon-bg {
@@ -2136,7 +1992,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-tabs {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -2145,12 +2001,12 @@ form.fi-dropdown-list-item:focus-within * {
     border-bottom-width: 2px;
     border-style: solid;
     border-color: var(--gray-950);
-    background-color: rgb(249 250 251);
+    background-color: var(--gray-50);
 }
 
 .dark .fi-tabs-nav {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
 }
 
 .fi-tabs-item {
@@ -2163,13 +2019,13 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-tabs-item:hover {
-    background-color: rgb(229 231 235);
+    background-color: var(--gray-200);
     border-color: var(--gray-400);
     box-shadow: 2px 2px 0px var(--gray-400);
 }
 
 .dark .fi-tabs-item:hover {
-    background-color: rgb(55 65 81);
+    background-color: var(--gray-700);
     border-color: var(--gray-600);
     box-shadow: 2px 2px 0px var(--gray-600);
 }
@@ -2202,13 +2058,13 @@ form.fi-dropdown-list-item:focus-within * {
     border-style: solid;
     border-color: var(--gray-950);
     border-radius: 0.5rem;
-    background-color: rgb(240 253 244);
+    background-color: var(--success-50);
     box-shadow: 4px 4px 0px var(--gray-950);
 }
 
 .dark .fi-in-list {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -2268,7 +2124,7 @@ form.fi-dropdown-list-item:focus-within * {
     border-width: 2px;
     border-style: solid;
     border-color: var(--gray-950);
-    background-color: rgb(240 253 244);
+    background-color: var(--success-50);
     box-shadow: 4px 4px 0px var(--gray-950);
     transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
@@ -2276,7 +2132,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-fo-repeater .fi-fo-repeater-item {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -2332,7 +2188,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-fo-repeater .fi-fo-repeater-item-header-icon {
-    color: rgb(55 65 81);
+    color: var(--gray-700);
 }
 
 .dark .fi-fo-repeater .fi-fo-repeater-item-header-icon {
@@ -2421,7 +2277,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-fo-repeater .fi-fo-repeater-add-between-items {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 2px 2px 0px var(--gray-600);
 }
 
@@ -2452,11 +2308,11 @@ form.fi-dropdown-list-item:focus-within * {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 600;
-    color: rgb(55 65 81);
+    color: var(--gray-700);
 }
 
 .dark .fi-fo-repeater .fi-fo-repeater-label-between-items {
-    color: rgb(209 213 219);
+    color: var(--gray-300);
 }
 
 .fi-fo-repeater .fi-fo-repeater-label-between-items-divider-after {
@@ -2507,14 +2363,14 @@ form.fi-dropdown-list-item:focus-within * {
     border-width: 2px;
     border-style: solid;
     border-color: var(--gray-950);
-    background-color: rgb(254 252 232);
+    background-color: var(--warning-50);
     padding: 1rem;
     box-shadow: 3px 3px 0px var(--gray-950);
 }
 
 .dark .fi-fo-simple-repeater .fi-fo-simple-repeater-item {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     box-shadow: 3px 3px 0px var(--gray-600);
 }
 
@@ -2568,7 +2424,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-fo-table-repeater > table {
     border-color: var(--gray-600);
-    background-color: rgb(17 24 39);
+    background-color: var(--gray-900);
     box-shadow: 4px 4px 0px var(--gray-600);
 }
 
@@ -2597,7 +2453,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-fo-table-repeater > table > thead > tr > th {
     border-color: var(--gray-950);
-    background-color: rgb(219 234 254);
+    background-color: var(--primary-100);
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     padding-top: 0.5rem;
@@ -2618,7 +2474,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-fo-table-repeater > table > thead > tr > th {
     border-color: var(--gray-600);
-    background-color: rgb(31 41 55);
+    background-color: var(--gray-800);
     color: white;
 }
 
@@ -2654,7 +2510,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .dark .fi-ta-content-header {
-    border-color: rgb(55 65 81);
+    border-color: var(--gray-700);
 }
 
 .fi-ta-content {
@@ -2672,7 +2528,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .dark .fi-ta-content,
 .dark .fi-ta-content > * + * {
-    border-color: rgb(55 65 81);
+    border-color: var(--gray-700);
 }
 
 .fi-fo-table-repeater > table > tbody {

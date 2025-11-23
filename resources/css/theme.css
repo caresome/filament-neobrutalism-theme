@@ -2138,7 +2138,8 @@ form.fi-dropdown-list-item:focus-within * {
     background-color: var(--gray-50);
 }
 
-.dark .fi-tabs-nav {
+.dark .fi-tabs-nav,
+.dark .fi-ta-filters-above-content-ctn {
     border-color: var(--gray-600);
     background-color: var(--gray-800);
 }

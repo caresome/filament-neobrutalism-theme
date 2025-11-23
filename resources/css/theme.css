@@ -1,5 +1,5 @@
 /* ============================================
-   Neo-Brutalism Theme - Pure CSS Version
+   Neo-Brutalism Theme
    ============================================ */
 
 /* ============================================
@@ -1210,13 +1210,15 @@ form.fi-dropdown-list-item:focus-within * {
         var(--gray-600);
 }
 
-.fi-ta-table > thead {
+.fi-ta-table > thead,
+.fi-ta-content-header {
     border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
 
-.dark .fi-ta-table > thead {
+.dark .fi-ta-table > thead,
+.dark .fi-ta-content-header {
     border-color: var(--gray-600);
 }
 
@@ -1228,6 +1230,15 @@ form.fi-dropdown-list-item:focus-within * {
     border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
+}
+
+.fi-ta-content-ctn .fi-ta-content:not(.fi-ta-content-grid) {
+    background-color: var(--gray-950);
+    row-gap: var(--neo-border-width);
+}
+
+.dark .fi-ta-content-ctn .fi-ta-content:not(.fi-ta-content-grid) {
+    background-color: var(--gray-600);
 }
 
 .dark .fi-ta-table > tbody > .fi-ta-row {

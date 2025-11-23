@@ -2,6 +2,11 @@
 
 All notable changes to `filament-neobrutalism-theme` will be documented in this file.
 
+## 1.0.1 - 2025-11-23
+
+### Fixed
+- Fixed incomplete neo-brutalism styling for table elements
+
 ## 1.0.0 - 2025-11-23
 
 ### Added

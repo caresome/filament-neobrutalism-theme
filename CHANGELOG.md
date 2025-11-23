@@ -11,4 +11,7 @@ All notable changes to `filament-neobrutalism-theme` will be documented in this 
 - Easy installation via Composer
 - Automatic asset registration using FilamentAsset
 - Simple plugin registration with `NeobrutalismeTheme::make()`
+- `customize()` method for easy CSS variable customization
+- Auto-prefixing of CSS variables with `--neo-` for cleaner API
+- Support for custom CSS variables and dynamic values via Closures
 - Compatible with Filament v4.x

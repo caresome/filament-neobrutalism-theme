@@ -1,3 +1,14 @@
 # Changelog
 
-All notable changes to `:package_name` will be documented in this file.
+All notable changes to `filament-neobrutalism-theme` will be documented in this file.
+
+## 1.0.0 - 2025-11-23
+
+### Added
+- Initial release of Filament Neobrutalism Theme
+- Neobrutalism design system for Filament PHP admin panels
+- Complete CSS theme with bold borders, shadows, and brutalist aesthetics
+- Easy installation via Composer
+- Automatic asset registration using FilamentAsset
+- Simple plugin registration with `NeobrutalismeTheme::make()`
+- Compatible with Filament v4.x

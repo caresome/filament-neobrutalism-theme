@@ -1,9 +1,5 @@
 # Filament Neobrutalism Theme
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/caresome/filament-neobrutalism-theme.svg?style=flat-square)](https://packagist.org/packages/caresome/filament-neobrutalism-theme)
-[![Total Downloads](https://img.shields.io/packagist/dt/caresome/filament-neobrutalism-theme.svg?style=flat-square)](https://packagist.org/packages/caresome/filament-neobrutalism-theme)
-[![License](https://img.shields.io/packagist/l/caresome/filament-neobrutalism-theme.svg?style=flat-square)](https://packagist.org/packages/caresome/filament-neobrutalism-theme)
-
 A bold, brutalist design system for FilamentPHP admin panels. Transform your Filament interface with thick borders, pronounced shadows, and geometric aesthetics inspired by the neobrutalism design movement.
 
 ![filament-neobrutalis-theme](https://github.com/user-attachments/assets/3d81b99a-67d0-44b0-b5ad-7b77cee6399b)

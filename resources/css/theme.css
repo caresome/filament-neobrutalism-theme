@@ -625,7 +625,7 @@ body,
 }
 
 .fi-section > .fi-section-header {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -635,7 +635,7 @@ body,
 }
 
 .fi-section > .fi-section-content-ctn > .fi-section-footer {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -645,7 +645,7 @@ body,
 }
 
 .fi-section.fi-divided > .fi-section-content-ctn > .fi-section-content > * {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-color: var(--gray-950);
 }
 
@@ -968,7 +968,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
 }
 
 .fi-modal-header.fi-sticky {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -978,7 +978,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
 }
 
 .fi-modal-footer.fi-sticky {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1036,7 +1036,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
 }
 
 .fi-dropdown-header {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1046,7 +1046,7 @@ input[type="radio"].fi-radio-input.fi-invalid {
 }
 
 .fi-dropdown-panel:not(.fi-dropdown-list) > :not(:last-child) {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-color: var(--gray-950);
 }
 
@@ -1131,7 +1131,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-fo-file-upload-editor-control-panel-footer {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1162,7 +1162,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-header-toolbar {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1172,7 +1172,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-header {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-color: var(--gray-600);
 }
 
@@ -1211,7 +1211,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-table > thead {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1225,7 +1225,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-table > tbody > .fi-ta-row {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1239,7 +1239,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-selection-indicator {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-color: var(--gray-950);
 }
 
@@ -1248,7 +1248,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-table > tfoot {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1258,7 +1258,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-ta-empty-state {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1269,7 +1269,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-ta-footer,
 .fi-ta-pagination {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1280,7 +1280,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-pagination {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-color: var(--gray-950);
 }
 
@@ -1444,7 +1444,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-sidebar-header {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
 }
 
 .dark .fi-sidebar-header {
@@ -1802,7 +1802,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* Result group dividers */
 .fi-global-search-results > * + * {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-color: var(--gray-950);
 }
 
@@ -1826,7 +1826,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* Result group results dividers */
 .fi-global-search-result-group-results > * + * {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-color: var(--gray-200);
 }
 
@@ -1983,7 +1983,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-fo-file-upload-editor-control-panel {
-    border-top-width: 2px;
+    border-top-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -1991,7 +1991,7 @@ form.fi-dropdown-list-item:focus-within * {
 @media (min-width: 1024px) {
     .fi-fo-file-upload-editor-control-panel {
         border-top-width: 0;
-        border-left-width: 2px;
+        border-left-width: var(--neo-border-width);
     }
 }
 
@@ -2025,7 +2025,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-fo-rich-editor .fi-fo-rich-editor-custom-block-header {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-color: var(--gray-950);
 }
 
@@ -2132,7 +2132,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-tabs-nav,
 .fi-ta-filters-above-content-ctn {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
     background-color: var(--gray-50);
@@ -2210,7 +2210,7 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-in-list-item {
-    border-bottom-width: 2px;
+    border-bottom-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
 }
@@ -2595,7 +2595,7 @@ form.fi-dropdown-list-item:focus-within * {
                 & > th {
                     &:not(:last-of-type) {
                         border-color: var(--gray-950);
-                        border-inline-end-width: 2px;
+                        border-inline-end-width: var(--neo-border-width);
                     }
                 }
             }
@@ -2603,7 +2603,7 @@ form.fi-dropdown-list-item:focus-within * {
         & > tbody {
             :where(& > :not(:last-child)) {
                 border-color: var(--gray-950);
-                border-bottom-width: 2px;
+                border-bottom-width: var(--neo-border-width);
             }
         }
     }

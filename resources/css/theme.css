@@ -2638,3 +2638,19 @@ form.fi-dropdown-list-item:focus-within * {
         }
     }
 }
+
+/* ============================================
+   Topbar Logo Styles
+   ============================================ */
+
+.fi-topbar .fi-logo svg {
+    fill: var(--gray-100);
+}
+
+.fi-topbar .fi-logo {
+    color: var(--gray-100);
+}
+
+.fi-topbar .fi-topbar-item-btn .fi-topbar-item-label {
+    color: var(--gray-100);
+}

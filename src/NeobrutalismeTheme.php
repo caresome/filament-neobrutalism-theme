@@ -5,6 +5,7 @@ namespace Caresome\FilamentNeobrutalism;
 use Closure;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
+use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 
 class NeobrutalismeTheme implements Plugin
@@ -42,6 +43,9 @@ class NeobrutalismeTheme implements Plugin
     public function register(Panel $panel): void
     {
         $panel
+            ->assets([
+                Css::make('neobrutalism-theme', __DIR__.'/../resources/css/theme.css'),
+            ], package: 'caresome/filament-neobrutalism-theme')
             ->resources([])
             ->pages([])
             ->widgets([]);

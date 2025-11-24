@@ -2,6 +2,12 @@
 
 All notable changes to `filament-neobrutalism-theme` will be documented in this file.
 
+## 1.0.2 - 2025-11-25
+
+### Fixed
+- Fixed theme applying globally to all Filament panels instead of only registered panels
+- Fixed topbar logo and navigation colors not using proper CSS variables
+
 ## 1.0.1 - 2025-11-23
 
 ### Fixed

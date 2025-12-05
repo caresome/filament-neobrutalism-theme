@@ -32,7 +32,7 @@ class NeobrutalismeTheme implements Plugin
             $set = is_callable($set) ? $set() : $set;
 
             foreach ($set as $key => $value) {
-                $cssVar = str_starts_with($key, '--') ? substr($key, 2) : "neo-{$key}";
+                $cssVar = str_starts_with((string) $key, '--') ? substr((string) $key, 2) : "neo-{$key}";
                 $variables[$cssVar] = $value;
             }
         }

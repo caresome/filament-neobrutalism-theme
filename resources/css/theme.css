@@ -54,6 +54,20 @@
     /* Effects */
     --neo-blur: 4px;
     --neo-blur-sm: 2px;
+    
+    /* Typography */
+    --neo-font-weight-normal: 400;
+    --neo-font-weight-semibold: 600;
+
+    /* Animation */
+    --neo-animation-duration-loading: 2s;
+
+    /* Scale */
+    --neo-scale: 1;
+
+    /* Outline */
+    --neo-outline-width: 2px;
+    --neo-outline-offset: 2px;
 }
 
 /* ============================================
@@ -132,38 +146,8 @@ h6,
 p,
 .fi-fo-field-wrp-hint,
 .fi-section-description {
-    font-weight: 400;
+    font-weight: var(--neo-font-weight-normal);
     letter-spacing: 0em;
-}
-
-/* ============================================
-   Noise Texture - Subtle Grain
-   ============================================ */
-
-/* Universal Grain Texture */
-.fi-section:not(.fi-section-not-contained):not(.fi-aside)::before,
-.fi-tabs::before,
-.fi-modal-window::before,
-.fi-fieldset::before,
-.fi-ta-ctn::before,
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' seed='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
-    background-size: 200px 200px;
-    opacity: 1;
-    pointer-events: none;
-    border-radius: inherit;
-    mix-blend-mode: overlay;
-}
-
-body::before {
-    position: fixed;
-    border-radius: 0;
 }
 
 /* Ensure content stays above texture */
@@ -173,16 +157,10 @@ body::before {
 .fi-fieldset,
 .fi-ta-ctn {
     position: relative;
-    overflow: hidden;
 }
 
-.fi-section:not(.fi-section-not-contained):not(.fi-aside) > *,
-.fi-tabs > *,
-.fi-modal-window > *,
-.fi-fieldset > *,
-.fi-ta-ctn > *,
-.fi-main {
-    position: relative;
+.fi-modal-window {
+    overflow-x: hidden;
 }
 
 /* Diagonal Stripe Pattern for Disabled States */
@@ -214,6 +192,10 @@ body::before {
 /* ============================================
    Base & Body Styles
    ============================================ */
+
+html {
+    font-size: calc(100% * var(--neo-scale, 1));
+}
 
 body,
 .fi-body,
@@ -287,7 +269,7 @@ body,
         var(--gray-200) 100%
     );
     background-size: 200% 100%;
-    animation: neo-shimmer 2s ease-in-out infinite;
+    animation: neo-shimmer var(--neo-animation-duration-loading) ease-in-out infinite;
 }
 
 .dark .fi-loading-section,
@@ -301,7 +283,7 @@ body,
         var(--gray-800) 100%
     );
     background-size: 200% 100%;
-    animation: neo-shimmer-dark 2s ease-in-out infinite;
+    animation: neo-shimmer-dark var(--neo-animation-duration-loading) ease-in-out infinite;
 }
 
 /* Diagonal stripe pattern overlay */
@@ -352,7 +334,7 @@ body,
         var(--gray-200) 100%
     );
     background-size: 200% 100%;
-    animation: neo-shimmer 2s ease-in-out infinite;
+    animation: neo-shimmer var(--neo-animation-duration-loading) ease-in-out infinite;
 }
 
 .dark .fi-wi-stats-overview-stat.fi-loading,
@@ -366,7 +348,7 @@ body,
         var(--gray-800) 100%
     );
     background-size: 200% 100%;
-    animation: neo-shimmer-dark 2s ease-in-out infinite;
+    animation: neo-shimmer-dark var(--neo-animation-duration-loading) ease-in-out infinite;
 }
 
 .fi-wi-stats-overview-stat.fi-loading::before,
@@ -595,8 +577,8 @@ body,
 
 /* Button Focus States */
 .fi-btn:focus-visible {
-    outline-width: 2px;
-    outline-offset: 2px;
+    outline-width: var(--neo-outline-width);
+    outline-offset: var(--neo-outline-offset);
     outline-color: var(--color-700, var(--gray-950));
 }
 
@@ -700,6 +682,10 @@ body,
     border-color: var(--gray-950);
 }
 
+.fi-fo-rich-editor-toolbar {
+    border-bottom-width: var(--neo-border-width);
+}
+
 .dark .fi-input-wrp-prefix,
 .dark .fi-input-wrp-suffix,
 .dark .fi-fo-tags-input-tags-ctn,
@@ -793,8 +779,8 @@ input[type="checkbox"].fi-checkbox-input:checked {
 }
 
 input[type="checkbox"].fi-checkbox-input:focus {
-    outline-width: 2px;
-    outline-offset: 2px;
+    outline-width: var(--neo-outline-width);
+    outline-offset: var(--neo-outline-offset);
     outline-color: var(--primary-700);
 }
 
@@ -844,8 +830,8 @@ input[type="radio"].fi-radio-input:checked {
 }
 
 input[type="radio"].fi-radio-input:focus {
-    outline-width: 2px;
-    outline-offset: 2px;
+    outline-width: var(--neo-outline-width);
+    outline-offset: var(--neo-outline-offset);
     outline-color: var(--primary-700);
 }
 
@@ -960,6 +946,8 @@ input[type="radio"].fi-radio-input.fi-invalid {
 .fi-modal-content {
     background-color: var(--warning-50);
     border-bottom: 0px;
+    border-top-right-radius: var(--neo-radius-md);
+    border-top-left-radius: var(--neo-radius-md);
 }
 
 .dark .fi-modal-header,
@@ -1222,8 +1210,37 @@ form.fi-dropdown-list-item:focus-within * {
     border-color: var(--gray-600);
 }
 
+.fi-ta-table .fi-ta-table-head-groups-row {
+    border-bottom-width: var(--neo-border-width);
+    border-style: solid;
+    border-color: var(--gray-950);
+}
+
+.dark .fi-ta-table .fi-ta-table-head-groups-row {
+    border-color: var(--gray-600);
+}
+
+.fi-ta-table .fi-ta-table-head-groups-row .fi-ta-header-group-cell {
+    border-right-width: var(--neo-border-width);
+    border-left-width: var(--neo-border-width);
+    border-color: var(--gray-950);
+}
+
+.dark .fi-ta-table .fi-ta-table-head-groups-row .fi-ta-header-group-cell {
+    border-color: var(--gray-600);
+}
+
+.fi-ta-table .fi-ta-header-cell {
+    border-right-width: var(--neo-border-width);
+    border-color: var(--gray-950);
+}
+
+.dark .fi-ta-table .fi-ta-header-cell {
+    border-color: var(--gray-600);
+}
+
 .fi-ta-table > thead > tr > th {
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
 }
 
 .fi-ta-table > tbody > .fi-ta-row {
@@ -1352,7 +1369,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-pagination-item:not(.fi-active):not(.fi-disabled)
     .fi-pagination-item-btn:hover {
-    transform: translateY(1px);
+    transform: translateY(var(--neo-transform-offset-xs));
     box-shadow: 1px 1px 0px var(--gray-950);
 }
 
@@ -1395,6 +1412,7 @@ form.fi-dropdown-list-item:focus-within * {
     transition-property: all;
     transition-duration: var(--neo-transition-duration);
     box-shadow: var(--neo-shadow-offset-sm) var(--neo-shadow-offset-sm) 0px;
+    margin: 1.5px 0;
 }
 
 .fi-badge:not(.fi-color) {
@@ -1432,8 +1450,8 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-topbar-item-btn .fi-badge,
 .fi-icon-btn .fi-badge {
     border-width: 0;
-    box-shadow: none;
-    border-radius: 9999px;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 /* ============================================
@@ -1478,7 +1496,7 @@ form.fi-dropdown-list-item:focus-within * {
     border-style: solid;
     border-color: transparent;
     transition-property: all;
-    transition-duration: 50ms;
+    transition-duration: var(--neo-transition-duration);
 }
 
 .fi-sidebar-item.fi-sidebar-item-has-url:not(.fi-active)
@@ -1513,8 +1531,8 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 .fi-sidebar-item-btn:focus-visible {
-    outline-width: 2px;
-    outline-offset: 2px;
+    outline-width: var(--neo-outline-width);
+    outline-offset: var(--neo-outline-offset);
     outline-color: var(--primary-700);
 }
 
@@ -1543,7 +1561,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-sidebar-item-label {
     color: white;
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
 }
 
 .fi-sidebar .fi-user-menu-trigger {
@@ -1567,7 +1585,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-sidebar .fi-user-menu-trigger:hover {
     border-color: white;
-    transform: translateX(0.125rem);
+    transform: translateX(var(--neo-transform-offset-xs));
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: var(--neo-shadow-offset-md) var(--neo-shadow-offset-md) 0px
         white;
@@ -1594,7 +1612,7 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-sidebar .fi-user-menu .fi-dropdown-header-label,
 .fi-sidebar .fi-user-menu .fi-dropdown-header * {
     color: var(--gray-100);
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
 }
 
 .dark .fi-sidebar .fi-user-menu .fi-dropdown-header,
@@ -1706,32 +1724,7 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-topbar-item.fi-active .fi-topbar-item-btn > .fi-icon,
 .fi-topbar-item.fi-active .fi-topbar-item-label {
     color: white;
-    font-weight: 600;
-}
-
-/* Database Notifications Button */
-.fi-topbar-database-notifications-btn {
-    border-width: var(--neo-border-width);
-    border-style: solid;
-    border-color: transparent;
-    border-radius: var(--neo-radius-sm);
-    transition-property: all;
-    transition-duration: var(--neo-transition-duration);
-}
-
-.fi-topbar-database-notifications-btn:hover {
-    transform: translateY(calc(-1 * var(--neo-transform-offset-xs)));
-    background-color: var(--primary-700);
-    border-color: var(--primary-800);
-    box-shadow: var(--neo-shadow-offset-md) var(--neo-shadow-offset-md) 0px
-        var(--primary-800);
-}
-
-.dark .fi-topbar-database-notifications-btn:hover {
-    background-color: var(--primary-400);
-    border-color: var(--primary-300);
-    box-shadow: var(--neo-shadow-offset-md) var(--neo-shadow-offset-md) 0px
-        var(--primary-300);
+    font-weight: var(--neo-font-weight-semibold);
 }
 
 /* ============================================
@@ -1740,11 +1733,11 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* Global Search Input */
 .fi-global-search-field .fi-input-wrapper {
-    border: 2px solid var(--gray-950);
+    border: var(--neo-border-width) solid var(--gray-950);
     border-radius: var(--neo-radius-md);
     background-color: white;
     transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--neo-transition-timing);
     transition-duration: var(--neo-transition-duration);
     box-shadow: var(--neo-shadow-offset-sm) var(--neo-shadow-offset-sm) 0px
         var(--gray-950);
@@ -1794,7 +1787,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* Search Results Container */
 .fi-global-search-results-ctn {
-    border: 2px solid var(--gray-950);
+    border: var(--neo-border-width) solid var(--gray-950);
     border-radius: var(--neo-radius-lg);
     box-shadow: var(--neo-shadow-offset-xl) var(--neo-shadow-offset-xl) 0px
         var(--gray-950);
@@ -1808,7 +1801,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* No results message */
 .fi-global-search-no-results-message {
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
 }
 
 /* Result group dividers */
@@ -1823,9 +1816,9 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* Group header */
 .fi-global-search-result-group-header {
-    border-bottom: 2px solid var(--gray-950);
+    border-bottom: var(--neo-border-width) solid var(--gray-950);
     background-color: var(--warning-50);
-    font-weight: 900;
+    font-weight: var(--neo-font-weight-black);
     text-transform: uppercase;
     letter-spacing: 0.025em;
 }
@@ -1858,12 +1851,12 @@ form.fi-dropdown-list-item:focus-within * {
 
 /* Result heading */
 .fi-global-search-result-heading {
-    font-weight: 800;
+    font-weight: var(--neo-font-weight-extrabold);
 }
 
 /* Result detail label */
 .fi-global-search-result-detail-label {
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
 }
 
 /* ============================================
@@ -1890,7 +1883,7 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-fieldset-legend,
 .fi-sc-fieldset-legend,
 .fi-fo-fieldset-legend {
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
     color: var(--gray-950);
 }
 
@@ -1978,8 +1971,8 @@ form.fi-dropdown-list-item:focus-within * {
     border-width: var(--neo-border-width);
     border-style: solid;
     border-color: var(--gray-950);
-    border-radius: var(--neo-radius-md);
-    background-color: var(--warning-50);
+    border-radius: var(--neo-radius-lg);
+    background-color: var(--gray-50);
     transition-property: all;
     transition-duration: var(--neo-transition-duration);
     box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px
@@ -2065,62 +2058,6 @@ form.fi-dropdown-list-item:focus-within * {
 }
 
 /* ============================================
-   Alert/Notification Styles
-   ============================================ */
-
-.fi-alert {
-    border-width: var(--neo-border-width);
-    border-style: solid;
-    border-radius: var(--neo-radius-md);
-    transition-property: all;
-    transition-duration: var(--neo-transition-duration);
-    box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px;
-}
-
-.fi-alert:not(.fi-color) {
-    background-color: var(--primary-50);
-    border-color: var(--info-600);
-    box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px
-        var(--info-600);
-}
-
-.dark .fi-alert:not(.fi-color) {
-    background-color: var(--gray-900);
-    border-color: var(--info-400);
-    box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px
-        var(--info-400);
-}
-
-.fi-alert.fi-color {
-    border-color: var(--color-600);
-    box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px
-        var(--color-600);
-    background-color: var(--color-50);
-}
-
-.dark .fi-alert.fi-color {
-    border-color: var(--color-400);
-    box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px
-        var(--color-400);
-    background-color: var(--gray-900);
-}
-
-.fi-alert-icon-bg {
-    border-width: var(--neo-border-width);
-    border-style: solid;
-    border-radius: var(--neo-radius-sm);
-    border-color: var(--color-600, var(--gray-950));
-    box-shadow: var(--neo-shadow-offset-sm) var(--neo-shadow-offset-sm) 0px
-        var(--color-600, var(--gray-950));
-}
-
-.dark .fi-alert-icon-bg {
-    border-color: var(--color-400, var(--gray-600));
-    box-shadow: var(--neo-shadow-offset-sm) var(--neo-shadow-offset-sm) 0px
-        var(--color-400, var(--gray-600));
-}
-
-/* ============================================
    Tabs Styles
    ============================================ */
 
@@ -2180,7 +2117,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-tabs-item.fi-active {
     color: white;
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
     background-color: var(--primary-600);
     border-color: var(--primary-700);
     box-shadow: var(--neo-shadow-offset-md) var(--neo-shadow-offset-md) 0px
@@ -2444,7 +2381,7 @@ form.fi-dropdown-list-item:focus-within * {
     box-shadow: var(--neo-shadow-offset-lg) var(--neo-shadow-offset-lg) 0px
         var(--gray-950);
     overflow: hidden;
-    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all var(--neo-transition-duration) var(--neo-transition-timing);
 }
 
 .dark .fi-fo-repeater .fi-fo-repeater-item {
@@ -2466,7 +2403,7 @@ form.fi-dropdown-list-item:focus-within * {
     align-items: center;
     gap: var(--neo-spacing-md);
     padding: 1rem;
-    border-bottom: 2px solid var(--gray-950);
+    border-bottom: var(--neo-border-width) solid var(--gray-950);
 }
 
 .dark .fi-fo-repeater .fi-fo-repeater-item-header {
@@ -2482,7 +2419,7 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-fo-repeater.fi-fo-repeater-collapsible .fi-fo-repeater-item-header {
     cursor: pointer;
     user-select: none;
-    transition: background-color 150ms;
+    transition: background-color var(--neo-transition-duration) var(--neo-transition-timing);
 }
 
 .fi-fo-repeater.fi-fo-repeater-collapsible .fi-fo-repeater-item-header:hover {
@@ -2499,7 +2436,7 @@ form.fi-dropdown-list-item:focus-within * {
 .fi-fo-repeater .fi-fo-repeater-item-header-label {
     font-size: 0.875rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: var(--neo-font-weight-bold);
     color: var(--gray-950);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -2581,7 +2518,7 @@ form.fi-dropdown-list-item:focus-within * {
 /* Table Header */
 .fi-fo-table-repeater > table > thead {
     background-color: var(--gray-100);
-    border-bottom: 2px solid var(--gray-950);
+    border-bottom: var(--neo-border-width) solid var(--gray-950);
 }
 
 .dark .fi-fo-table-repeater > table > thead {
@@ -2591,7 +2528,7 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-fo-table-repeater > table > tbody {
     background-color: var(--gray-100);
-    border-bottom: 2px solid var(--gray-950);
+    border-bottom: var(--neo-border-width) solid var(--gray-950);
 }
 
 .dark .fi-fo-table-repeater > table > tbody {
@@ -2653,4 +2590,54 @@ form.fi-dropdown-list-item:focus-within * {
 
 .fi-topbar .fi-topbar-item-btn .fi-topbar-item-label {
     color: var(--gray-100);
+}
+
+/* ============================================
+   Toggle (Switch) Styles
+   ============================================ */
+
+/* Toggle Container */
+.fi-toggle {
+    border-width: var(--neo-border-width);
+    border-style: solid;
+    border-color: var(--gray-950);
+    box-shadow: var(--neo-shadow-offset-sm) var(--neo-shadow-offset-sm) 0px
+        var(--gray-950);
+    transition: all var(--neo-transition-duration) var(--neo-transition-timing);
+}
+
+.dark .fi-toggle {
+    border-color: var(--gray-600);
+    box-shadow: var(--neo-shadow-offset-sm) var(--neo-shadow-offset-sm) 0px
+        var(--gray-600);
+}
+
+
+/* ============================================
+   Notification Styles
+   ============================================ */
+
+.fi-no-notification-unread-ctn {
+    margin: 0.3rem;
+    border-radius: var(--neo-radius-md);
+
+    .fi-no-notification {
+        border-top-right-radius: var(--neo-radius-md);
+        border-bottom-right-radius: var(--neo-radius-md);
+    }
+}
+
+.fi-no-notification {
+    border-width: var(--neo-border-width);
+    border-style: solid;
+    border-color: var(--gray-950);
+    box-shadow: var(--neo-shadow-offset-md) var(--neo-shadow-offset-md) 0px
+        var(--gray-950);
+    transition: all var(--neo-transition-duration) var(--neo-transition-timing);
+}
+
+.dark .fi-no-notification {
+    border-color: var(--gray-600);
+    box-shadow: var(--neo-shadow-offset-md) var(--neo-shadow-offset-md) 0px
+        var(--gray-600);
 }

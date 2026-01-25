@@ -2,6 +2,12 @@
 
 All notable changes to `filament-neobrutalism-theme` will be documented in this file.
 
+## 2.0.0 - 2026-01-25
+
+### Changed
+
+-   Add Filament v5 compatibility and update composer constraint
+
 ## 1.1.0 - 2025-12-06
 
 ### Added

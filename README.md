@@ -26,7 +26,7 @@ A bold, brutalist design system for FilamentPHP admin panels. Transform your Fil
 -   🔌 **Easy Integration** - Single line plugin registration
 -   📦 **Lightweight** - Pure CSS with no JavaScript dependencies
 -   🚀 **Performance Optimized** - Minimal CSS with CSS variables for dynamic theming
--   ✅ **Filament v5 Compatible** - Built for Filament v5.x
+-   ✅ **Filament v4 & v5 Compatible** - Built for Filament v4.x and v5.x
 
 ## Screenshots
 

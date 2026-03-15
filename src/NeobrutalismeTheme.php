@@ -45,7 +45,7 @@ class NeobrutalismeTheme implements Plugin
         $panel
             ->assets([
                 Css::make('neobrutalism-theme', __DIR__.'/../resources/css/theme.css'),
-            ], package: 'caresome/filament-neobrutalism-theme')
+            ], 'caresome/filament-neobrutalism-theme')
             ->resources([])
             ->pages([])
             ->widgets([]);
